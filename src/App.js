@@ -10,7 +10,7 @@ function App() {
     { title: "Administracion de Productos", src: "Folder", href: "/AdminProduct" },
     { title: "Administracion de Categorias", src: "Folder", href: "/Categoria" },
     { title: "Administracion de Ajustes", src: "Setting", href: "/AdminAjuste" },
-    { title: "Administracion de Ajustes", src: "Setting", href: "/AdminAjustes" },
+    { title: "Administracion de Detalles de ajustes", src: "Setting", href: "/AdminAjustes" },
     { title: "Administracion de Ventas", src: "Search", href: "/AdminVentas" },
     { title: "Administración de Clientes", src: "User", href: "/AdminClientes" },
     { title: "Administración de Tipos de ajuste", src: "Setting", href: "/AdminTipoAjuste" },
