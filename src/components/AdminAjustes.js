@@ -56,7 +56,7 @@ const AdminAjustes = () => {
       const searchFields = [
         clientes.aju_det_cantidad,
         clientes.tipo_nombre,
-        clientes.pro_nombre.toString(), // Agrega pro_nombre a los campos de búsqueda
+        clientes.pro_nombre, // Agrega pro_nombre a los campos de búsqueda
       ];
       console.log("CAMPOS")
       console.log(searchFields)
