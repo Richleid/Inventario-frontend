@@ -125,30 +125,22 @@ const AdminTipoAjuste = () => {
             <div className="lg:w-full p-3">
               {/* Tabla de tipos de ajuste */}
               <table className="w-full border-collapse divide-y divide-x divide-gray-500 text-center">
-                <thead className="bg-dark-purple text-white">
-                  <tr>
-                    <th className="px-4 py-2 text-center text-sm">OPCIONES</th>
-                    <th className="px-4 py-2 text-center text-sm">ID</th>
-                    <th className="px-4 py-2 text-center text-sm">TIPO DE AJUSTE</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y-2 divide-gray-300">
-                  {currentTipos.map((tipo, index) => (
-                    <tr key={tipo.tipo_id} className={`bg-white ${index % 2 === 0 ? 'bg-gray-50' : ''} hover:bg-gray-100`}>
-                      <td className="px-4 py-4">
-                        <button
-                          onClick={() => openModal(2, tipo.tipo_id, tipo.tipo_nombre)}
-                          className="bg-dark-purple p-2 rounded-full mx-1"
-                        >
-                          <i className="fa-solid fa-edit text-white"></i>
-                        </button>
-                      </td>
-                      <td className="px-4 py-4">{tipo.tipo_id}</td>
-                      <td className="px-4 py-4">{tipo.tipo_nombre}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+  <thead className="bg-dark-purple text-white">
+    <tr>
+      <th className="px-4 py-2 text-center text-sm">ID</th>
+      <th className="px-4 py-2 text-center text-sm">TIPO DE AJUSTE</th>
+    </tr>
+  </thead>
+  <tbody className="divide-y-2 divide-gray-300">
+    {currentTipos.map((tipo, index) => (
+      <tr key={tipo.tipo_id} className={`bg-white ${index % 2 === 0 ? 'bg-gray-50' : ''} hover:bg-gray-100`}>
+        <td className="px-4 py-4">{tipo.tipo_id}</td>
+        <td className="px-4 py-4">{tipo.tipo_nombre}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
             </div>
             {/* Paginación */}
             {/* Resto de la interfaz */}
