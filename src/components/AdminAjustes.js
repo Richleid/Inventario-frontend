@@ -43,6 +43,8 @@ const AdminAjustes = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchColumn, setSearchColumn] = useState("");
 
+  
+
   const columns = [
     { value: "", label: "Buscar en todas las columnas" },
     { value: "pro_nombre", label: "Nombre producto" },
@@ -121,7 +123,7 @@ const AdminAjustes = () => {
     setProNombre('');
     setAjuDetCantidad('');
     setTipoNombre('');
-    setAjuEstado(aju_det_modificable);
+    setAjuEstado(true);
     setoperation(op);
     if (op === 1) {
       setTittle('Registrar ajuste');
@@ -258,9 +260,6 @@ const AdminAjustes = () => {
               <button onClick={() => openModal(1)} className="bg-dark-purple text-white p-3 rounded">
                 <i className="fa-solid fa-circle-plus"></i>Añadir
               </button>
-              <div style={{ position: "fixed", top: "1.5%", right: "10%" }}>
-                <PDFButton data={ajuste} />
-              </div>
             </div>
           </div>
         </div>

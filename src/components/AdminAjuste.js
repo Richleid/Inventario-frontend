@@ -114,7 +114,7 @@ const AdminProducts = () => {
         setAjuNumero('');
         setAjuFecha('');
         setAjuDescripcion('');
-        setAjuEstado(aju_estado);
+        setAjuEstado(true);
         setModalOpen(true);
         setoperation(op);
         if (op === 1) {
@@ -242,9 +242,6 @@ const AdminProducts = () => {
                             <button onClick={() => openModal(1)} className="bg-dark-purple text-white p-3 rounded">
                                 <i className="fa-solid fa-circle-plus"></i>Añadir
                             </button>
-                            <div style={{ position: "fixed", top: "1.5%", right: "10%" }}>
-                                <PDFButton data={ajuste} />
-                            </div>
                         </div>
                     </div>
                 </div>

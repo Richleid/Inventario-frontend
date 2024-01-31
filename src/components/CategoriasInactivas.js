@@ -83,7 +83,7 @@ const CategoriaInactivas = () => {
     const openModal = (op, cat_id, cat_nombre, cat_estado) => {
         setcatId('');
         setcatNombre('');
-        setcatEstado(true);
+        setcatEstado(false);
         setoperation(op);
         setModalOpen(true);
         if (op === 1) {
@@ -92,7 +92,7 @@ const CategoriaInactivas = () => {
             setTittle('Actualizar Categoría');
             setcatId(cat_id);
             setcatNombre(cat_nombre);
-            setcatEstado(true);
+            setcatEstado(false);
         }
         window.setTimeout(function () {
             document.getElementById('cat_nombre').focus();
@@ -195,9 +195,6 @@ const CategoriaInactivas = () => {
                                 value={searchTerm}
                                 onChange={handleSearch}
                             />
-                            <button onClick={() => openModal(1)} className="bg-dark-purple text-white p-3 rounded">
-                                <i className="fa-solid fa-circle-plus"></i>Añadir
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -295,18 +292,21 @@ const CategoriaInactivas = () => {
                                     onChange={(e) => setcatNombre(e.target.value)}
                                 ></input>
                             </div>
-                            <div className="flex items-center space-x-2 mb-3">
-                                <span className="text-lg">
+                            <div className="grid grid-cols-2 gap-2 mb-3">
+                                <div className="flex items-center space-x-2">
                                     <i className="fa-solid fa-edit"></i>
-                                </span>
-                                <input
-                                    type="text"
-                                    id="cat_estado"
-                                    className="border border-gray-200 rounded px-3 py-2 w-full"
-                                    placeholder="Estado"
-                                    value={cat_estado}
-                                    onChange={(e) => setcatEstado(e.target.value)}
-                                ></input>
+                                    <label className="text-sm">Estado: </label>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <input
+                                        type="checkbox"
+                                        id="cat_estado"
+                                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                        checked={cat_estado}
+                                        onChange={(e) => setcatEstado(e.target.value)}
+                                    />
+                                    <p>{cat_estado ? "Activo" : "Inactivo"}</p>
+                                </div>
                             </div>
                             <div className="d-grid col-6 mx-auto flex justify-center">
                                 <button onClick={() => validar()} className="bg-dark-purple text-white p-3 rounded">

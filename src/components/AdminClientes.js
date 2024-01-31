@@ -42,7 +42,6 @@ const AdminClientes = () => {
         { value: "cli_id", label: "ID" },
         { value: "cli_nombre", label: "Nombre del cliente" },
         { value: "cli_apellido", label: "Apellido" },
-        { value: "cat_nombre", label: "Categoría" },
     ];
 
     const filteredClientes = cliente.filter((clientes) => {
@@ -117,7 +116,7 @@ const AdminClientes = () => {
         setcliApellido('');
         setcliEmail('');
         setcliTelefono('');
-        setCliEstado(cli_estado);
+        setCliEstado(true);
         setModalOpen(true);
         setoperation(op);
         if (op === 1) {
@@ -255,9 +254,6 @@ const AdminClientes = () => {
                             <button onClick={() => openModal(1)} className="bg-dark-purple text-white p-3 rounded">
                                 <i className="fa-solid fa-circle-plus"></i>Añadir
                             </button>
-                            <div style={{ position: "fixed", top: "1.5%", right: "10%" }}>
-                                <PDFButton data={cliente} />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -267,7 +263,8 @@ const AdminClientes = () => {
                             <tr>
                                 <th className="px-4 py-2 text-center text-sm">OPCIONES</th>
                                 <th className="px-4 py-2 text-center text-sm">ID</th>
-                                <th className="px-4 py-2 text-center text-sm">NOMBRE Y APELLIDO </th>
+                                <th className="px-4 py-2 text-center text-sm">NOMBRE</th>
+                                <th className="px-4 py-2 text-center text-sm">APELLIDO</th>
                                 <th className="px-20 py-2 text-center text-sm">EMAIL</th>
                                 <th className="px-20 py-2 text-center text-sm">TELÉFONO</th>
                                 <th className="px-4 py-2 text-center text-sm">ESTADO</th>
@@ -301,7 +298,8 @@ const AdminClientes = () => {
                                             </button>
                                         </td>
                                         <td>{clientes.cli_id}</td>
-                                        <td>{clientes.cli_nombre} {clientes.cli_apellido}</td>
+                                        <td>{clientes.cli_nombre}</td>
+                                        <td>{clientes.cli_apellido}</td>
                                         <td>{clientes.cli_email}</td>
                                         <td>{clientes.cli_telefono}</td>
                                         <td>{clientes.cli_estado ? "Activo" : "Inactivo"}</td>

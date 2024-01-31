@@ -388,7 +388,7 @@ const ProductosInactivos = () => {
                                                 'Imagen no encontrada'
                                             )}
                                         </td>
-                                        <td>{productos.pro_estado ? 'Inactivo' : 'Activo'}</td>
+                                        <td>{productos.pro_estado ? 'Activo' : 'Inactivo'}</td>
                                     </tr>
                                 );
                             })}

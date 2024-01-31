@@ -119,9 +119,6 @@ const AdminTipoAjuste = () => {
                     value={searchTerm}
                     onChange={handleSearch}
                   />
-                  <button onClick={() => openModal(1)} className="bg-dark-purple text-white p-3 rounded">
-                    <i className="fa-solid fa-circle-plus"></i> Añadir
-                  </button>
                 </div>
               </div>
             </div>
